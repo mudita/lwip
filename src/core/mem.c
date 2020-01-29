@@ -1002,7 +1002,7 @@ mem_calloc(mem_size_t count, mem_size_t size)
   size_t alloc_size = (size_t)count * (size_t)size;
 
   if ((size_t)(mem_size_t)alloc_size != alloc_size) {
-    LWIP_DEBUGF(MEM_DEBUG | LWIP_DBG_LEVEL_SERIOUS, ("mem_calloc: could not allocate %"SZT_F" bytes\n", alloc_size));
+    LWIP_DEBUGF(MEM_DEBUG | LWIP_DBG_LEVEL_SERIOUS, ("mem_calloc: could not allocate %"SZT_F" bytes\n", (uint32_t)alloc_size));
     return NULL;
   }
 
